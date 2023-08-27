@@ -10,7 +10,9 @@
     "PlayerTimerInjector",
     "ServerPlayerDataPersistence"
   ],
-  "client": [],
+  "client": [
+    "BossBarOffset"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

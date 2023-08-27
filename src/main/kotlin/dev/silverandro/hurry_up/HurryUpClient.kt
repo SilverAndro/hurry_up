@@ -53,10 +53,9 @@ object HurryUpClient : ClientModInitializer {
 
                 plusTimeEvents.forEach {
                     graphics.matrices.push()
-                    val offsetUnit = 1 / 8.0
+                    val offsetUnit = 1 / 6.0
                     val offset = -(if (it.displayTime > 50) (it.displayTime - 50) * offsetUnit + (offsetUnit * delta) else 0.0)
                     val plusText = "+" + ticksToTime(it.ticks, false)
-                    println("$offset $delta")
                     graphics.matrices.translate(0.0, 0.0 + offset, 0.0)
                     graphics.drawText(
                         textRenderer,
