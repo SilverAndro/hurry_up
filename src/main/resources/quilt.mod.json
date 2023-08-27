@@ -1,0 +1,46 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "dev.silverandro",
+		"id": "hurry_up",
+		"version": "${version}",
+		"metadata": {
+			"name": "Hurry Up!",
+			"description": "Minecraft mod that kills you if you dont play the game fast enough.",
+			"contributors": {
+				"SilverAndro": "Owner"
+			},
+			"icon": "assets/hurry_up/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": {
+				"adapter": "kotlin",
+				"value": "dev.silverandro.hurry_up.HurryUpMain"
+			},
+			"client_init": {
+				"adapter": "kotlin",
+				"value": "dev.silverandro.hurry_up.HurryUpClient"
+			}
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.19.2"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=7.0.2"
+			},
+			{
+				"id": "qkl",
+				"versions": ">=2.1.2"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.20"
+			}
+		]
+	},
+	"mixin": "hurry_up.mixins.json"
+}
